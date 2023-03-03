@@ -1,0 +1,139 @@
+/*// BASE STYLES //*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grass,
+.sky,
+.road {
+    position: relative;
+    z-index: -1;
+}
+
+.sky {
+    height: 40%;
+    background: skyblue;
+}
+
+.grass {
+    height: 30%;
+    background: seagreen;
+}
+
+.road {
+    height: 30%;
+    background: dimgrey;
+    box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+    width: 100%;
+    z-index: -1;
+}
+
+.lines {
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    z-index: -1;
+}
+
+/*// ELEMENTS TO ANIMATE //*/
+
+.mario {
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    animation: drive 3s 0.1s both infinite linear,
+        jump 2.3s 1.2s infinite ease;
+}
+
+.luigi {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    animation-name: drive;
+    animation-duration: 2.7s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.war {
+    filter: hue-rotate(-90deg);
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    animation-name: drive;
+    animation-duration: 2.1s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.cloud1 {
+    opacity: 50%;
+    position: absolute;
+    top: -700px;
+    left: 0px;
+    animation: drive 12s linear 0.3s infinite reverse both;
+}
+
+.cloud2 {
+    opacity: 50%;
+    position: absolute;
+    top: -600px;
+    left: 0px;
+    animation: drive 21s linear 1.3s infinite reverse both;
+}
+
+.cloud3 {
+    opacity: 50%;
+    position: absolute;
+    top: -500px;
+    left: 0px;
+    animation: drive 30s linear 3.3s infinite reverse both;
+}
+
+/*// KEYFRAMES //*/
+
+@keyframes drive {
+    from {
+        transform: translateX(-400px);
+    }
+
+    to {
+        transform: translateX(2000px);
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: -40px
+    }
+
+    40% {
+        top: -40px
+    }
+
+    50% {
+        top: -100px
+    }
+
+    60% {
+        top: -40px
+    }
+
+    100% {
+        top: -40px
+    }
+}

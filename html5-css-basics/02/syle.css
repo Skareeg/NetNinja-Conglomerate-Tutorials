@@ -1,0 +1,15 @@
+body {
+    background-color: darkslategrey;
+    color: white;
+}
+
+p {
+    color: slateblue;
+    column-count: 15;
+    column-rule-style: solid;
+    text-shadow: 2px 2px #e5ff00;
+}
+
+select {
+    border: 4pt solid crimson;
+}

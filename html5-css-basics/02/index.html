@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="syle.css">
+    <style>
+        h1 {
+            color: red;
+            background-color: green;
+            border-color: black;
+            border-width: 12pt;
+            border-style: dashed;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>HTML Forms</h1>
+
+    <form action="/itisempty.html">
+        <label for="theonering">What has it got in its pocket:</label>
+        <input type="text" name="theonring" id="theonering" placeholder="It speaks..." readonly>
+        <br><br>
+        <label for="email">Enter your soul:</label>
+        <input type="email" name="email" id="email" placeholder="It speaks..." required>
+        <br><br>
+        <label for="password">Enter your deathly password:</label>
+        <input type="password" name="password" id="password" placeholder="It speaks...">
+        <br><br>
+        <p>Select your eldritch form:</p>
+        <input type="radio" name="gender" value="helicopter" id="option-1">
+        <label for="option-1">Helicopter</label>
+        <br>
+        <input type="radio" name="gender" value="fire hose" id="option-2">
+        <label for="option-2">Fire Hose</label>
+        <br>
+        <input type="radio" name="gender" value="no steppy snek" id="option-3">
+        <label for="option-3">No Steppy Snek</label>
+        <br><br>
+        <label for="theq">Your evil past:</label>
+        <select name="theq" id="theq">
+            <option value="suffering">Suffering</option>
+            <option value="pain">Pain</option>
+            <option value="disease">Disease</option>
+        </select>
+        <br>
+        <label for="thea">Your response to this horror:</label>
+        <select name="thea" id="thea">
+            <option value="horror">MAKE IT STOP</option>
+            <option value="enjoy">WhAt wE NeEd iS mOrE EYES</option>
+        </select>
+        <br><br>
+        <label for="bio">When you close your eyes:</label><br>
+        <textarea name="bio" id="bio" cols="30" rows="1" placeholder="I see the light. It is beautiful."></textarea>
+        <br><br>
+        <label for="submit">Submit thyself to HIM:</label><br>
+        <input type="submit" value="submit to him" id="submit">
+    </form>
+
+</body>
+</html>
